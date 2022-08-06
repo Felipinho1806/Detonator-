@@ -1,0 +1,165 @@
+<!DOCTYPE html>  
+<html lang="pt-br">
+    <head>
+        <title> Detonador </title>
+        <meta charset="utf-8" /> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet"href="style.css">
+        <script type="text/javascript"src="script/script.js"></script>
+        <style>
+            li{font-family: "Berlin Sans FB"; font-size: 20px; color:white;}
+            a{font-family: "Berlin Sans FB"; font-size: 20px; color:white;}
+            *{
+                margin: 0 auto;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: 'Open Sans', sans-serif;
+            }
+
+            #menu-h{
+                background-color:rgb(237, 112, 67);
+            }
+
+            #menu-i ul{
+                max-width: 1915px;
+                list-style: none;
+                padding: 0px;
+                background-color: rgb(237, 112, 67);
+            }
+
+            #menu-i ul li{
+                display: inline;
+                padding: 15px;
+            }
+
+            #menu-i ul li a{
+                color: white ;
+                display: inline-block;
+                padding: 20px;
+                text-decoration: none;
+                transition: background .4s;
+            }
+
+            #menu-i ul li a:hover {
+                background-color: rgb(105, 105, 105);
+            }
+
+            #menu-i ul li:last-child a {
+                float: right;
+                background-color: rgb(193, 92, 15);
+            }
+
+            body{
+                margin: 0;
+                padding: 0;
+                height: 100vh;
+                width: 100vw;
+                }
+
+            .content {
+                height: 520px;
+                width: 935px;
+                border-radius: 20px;
+                overflow: hidden;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            .navigation {
+                position: absolute;
+                bottom: 20px;
+                left: 50%;
+                transform: translate(-50%);
+                display: flex;
+            }
+
+            .bar {
+                width: 70px;
+                height: 17px;
+                border: 2px solid #fff;
+                margin: 6px;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: .4s;
+            }
+
+            .bar:hover {
+                background-color: #fff;
+            }
+
+            input {
+                display: none;
+            }
+
+            .slides {
+                display: flex;
+                width: 500%;
+                height: 100%;
+            }
+
+            .slide {
+                width: 20%;
+                transition: .5s;
+            }
+
+            .slide img { 
+                width: 100%;
+                height: 100%;
+            }
+
+            #slide1:checked ~ .s1 {
+                margin-left: 0;
+            }
+
+            #slide2:checked ~ .s1 {
+                margin-left: -60%;
+            }
+
+            #slide3:checked ~ .s1 {
+                margin-left: -360%;
+            }
+
+        </style>
+    </head>
+
+    <body style="background-color: rgb(206, 203, 203);">
+        <nav id="menu-i">
+        <ul id="menu-i">
+            <li> <a href="Página inicial pós login.html"> Notícias </a> </li> 
+            <li> <a href="Jogos off-on.html"> Jogos </a> </li>  
+            <li> <a href="Fórum.html"> Fórum </a> </li> 
+            <li> <a href="Perfil.html"> Perfil </a> </li>
+            <li> <a href="Contatos.html"> Suporte </a> </li>
+            <li> <a href=Index.html> Sair </a> </li>
+        </ul>
+    </nav>
+    <div class="content">
+        <div class="slides">
+            <input type="radio" name="slide" id="slide1" checked>
+            <input type="radio" name="slide" id="slide2">
+            <input type="radio" name="slide" id="slide3">
+            <input type="radio" name="slide" id="slide4">
+            <input type="radio" name="slide" id="slide5">
+
+
+            <div class="slide s1">
+                <img src="god-of-war-capa (1).jpg" alt="Paisagem medieval com montanhas">
+            </div>
+            <div class="slide">
+                <img src="Mass-Effect-3-banner-baixesoft (1).jpg" alt="Paisagem fantasiosa com árvores roxas">
+            </div>
+            <div class="slide">
+                <img src="header.jpg" alt="Capa do jogo Cities skylines">
+        </div>
+
+        <div class="navigation">
+            <label class="bar" for="slide1"></label>
+            <label class="bar" for="slide2"></label>
+            <label class="bar" for="slide3"></label>
+        </div>
+    </div>
+    </body>
+</html>
+        
